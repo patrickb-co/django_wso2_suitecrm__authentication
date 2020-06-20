@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="django_EP" xmlns="http://ws.apache.org/ns/synapse">
+    <!-- example of django app created with: python manage.py startapp crm_app -->
+    <!-- the views.py file in the repository is the one inside this app -->
+    <address uri="http://localhost:8000/crm_app/">
+    
+        <suspendOnFailure>
+            <initialDuration>-1</initialDuration>
+            <progressionFactor>1.0</progressionFactor>
+        </suspendOnFailure>
+        <markForSuspension>
+            <retriesBeforeSuspension>0</retriesBeforeSuspension>
+        </markForSuspension>
+    </address>
+</endpoint>
